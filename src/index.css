@@ -41,9 +41,15 @@ body {
 }
 
 
-
+#section2{
+  position: relative;
+  perspective: 1500px;
+}
 
 #tiltDiv{
   /* background-color: red; */
   width: fit-content;
+}
+.rotateText{
+  transform-origin: 100% 70%;
 }
