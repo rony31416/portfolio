@@ -5,6 +5,7 @@ const Page3 = () => {
   const svgRef = useRef();
   const [isVisible, setIsVisible] = useState(false); // Track if page is in view
   const simulationRef = useRef(null); // Reference to store the simulation instance
+  const shakeTimeoutRef = useRef(null); // Reference for shake timeout
 
   useEffect(() => {
     const centralNodeName = "profile"; // Dynamic central node name
@@ -50,10 +51,10 @@ const Page3 = () => {
 
     const svg = d3.select(svgRef.current);
 
-    // Clean up the SVG content before rendering
-    svg.selectAll("*").remove();
-
     const initializeSimulation = () => {
+      // Clean up the SVG content before rendering
+      svg.selectAll("*").remove();
+
       // Create simulation
       simulationRef.current = d3
         .forceSimulation(nodes)
@@ -137,9 +138,8 @@ const Page3 = () => {
       const entry = entries[0];
       if (entry.isIntersecting) {
         setIsVisible(true); // Page is visible
-        if (!simulationRef.current) {
-          initializeSimulation(); // Initialize simulation only once
-        }
+        initializeSimulation(); // Reinitialize simulation when page is in view
+        triggerShake(); // Trigger the shake animation
       } else {
         setIsVisible(false); // Page is not visible
         if (simulationRef.current) {
@@ -165,6 +165,18 @@ const Page3 = () => {
       svg.selectAll("*").remove(); // Clean up the SVG content
     };
   }, []);
+
+  const triggerShake = () => {
+    const svgElement = svgRef.current;
+    svgElement.classList.add("shake");
+    // Remove the class after animation completes
+    if (shakeTimeoutRef.current) {
+      clearTimeout(shakeTimeoutRef.current);
+    }
+    shakeTimeoutRef.current = setTimeout(() => {
+      svgElement.classList.remove("shake");
+    }, 500); // Duration of the shake effect
+  };
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-indigo-600 to-blue-400">

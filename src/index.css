@@ -24,8 +24,7 @@
   src: url(./assets/madefor-text.var.original.woff2);
 }
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -40,16 +39,37 @@ body {
   background-color: #111;
 }
 
-
-#section2{
+#section2 {
   position: relative;
   perspective: 1500px;
 }
 
-#tiltDiv{
+#tiltDiv {
   /* background-color: red; */
   width: fit-content;
 }
-.rotateText{
+.rotateText {
   transform-origin: 100% 70%;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
 }
