@@ -51,7 +51,7 @@ body {
 .rotateText {
   transform-origin: 100% 70%;
 }
-
+/* 
 @keyframes shake {
   0% {
     transform: translateX(0);
@@ -72,4 +72,4 @@ body {
 
 .shake {
   animation: shake 0.5s ease-in-out;
-}
+} */
