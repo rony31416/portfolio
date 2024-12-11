@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import React, { useEffect, useRef, useState } from "react";
-
+import "../parallax.css"
 const Page3 = () => {
   const svgRef = useRef();
   const [isVisible, setIsVisible] = useState(false); // Track if page is in view
@@ -8,7 +8,7 @@ const Page3 = () => {
   const shakeTimeoutRef = useRef(null); // Reference for shake timeout
 
   useEffect(() => {
-    const centralNodeName = "profile"; // Dynamic central node name
+    const centralNodeName = "Skillsets"; // Dynamic central node name
 
     const width = 800;
     const height = 600;
@@ -18,34 +18,44 @@ const Page3 = () => {
 
     // Define the nodes
     const nodes = [
-      { id: centralNodeName, radius: 40 },
-      { id: "HTML", radius: 20 },
+      { id: centralNodeName, radius: 30 },
+      { id: "HTML", radius: 28 },
       { id: "CSS", radius: 20 },
-      { id: "JavaScript", radius: 30 },
-      { id: "React JS", radius: 25 },
+      { id: "JavaScript", radius: 34 },
+      { id: "React JS", radius: 28 },
       { id: "Node JS", radius: 25 },
       { id: "Python", radius: 30 },
-      { id: "Django", radius: 20 },
+      { id: "Django", radius: 24 },
       { id: "Flask", radius: 20 },
       { id: "C++", radius: 25 },
       { id: "Java", radius: 25 },
       { id: "Spring", radius: 20 },
-      { id: "Hibernate", radius: 20 },
+      { id: "Hibernate", radius: 30 },
+      {id: "Git",radius: 20},
+      {id: "BNLTK",radius: 28},
+      {id: "SQL",radius: 20},
+      {id: "Flutter",radius: 20},
+      {id: "Firebase",radius: 28},
     ];
 
     // Define the links with reduced distances (30% reduction)
     const links = [
-      { source: centralNodeName, target: "HTML", distance: 60 },
+      { source: centralNodeName, target: "HTML", distance: 80 },
+      { source: centralNodeName, target: "Git", distance: 80 },
+      { source: centralNodeName, target: "BNLTK", distance: 80 },
       { source: centralNodeName, target: "CSS", distance: 60 },
-      { source: centralNodeName, target: "JavaScript", distance: 40 },
+      { source: centralNodeName, target: "Flutter", distance: 6 },
+      { source: centralNodeName, target: "SQL", distance: 60 },
+      { source: centralNodeName, target: "JavaScript", distance: 4},
       { source: "JavaScript", target: "React JS", distance: 40 },
       { source: "JavaScript", target: "Node JS", distance: 45 },
-      { source: centralNodeName, target: "Python", distance: 40 },
+      { source: centralNodeName, target: "Python", distance: 20 },
       { source: "Python", target: "Django", distance: 35 },
       { source: "Python", target: "Flask", distance: 44 },
       { source: centralNodeName, target: "C++", distance: 77 },
-      { source: centralNodeName, target: "Java", distance: 54 },
-      { source: "Java", target: "Spring", distance: 30 },
+      { source: centralNodeName, target: "Java", distance: 1 },
+      { source: "Java", target: "Spring", distance: 2 },
+      { source: "Flutter", target: "Firebase", distance: 30 },
       { source: "Spring", target: "Hibernate", distance: 50 },
     ];
 
@@ -179,16 +189,20 @@ const Page3 = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-indigo-600 to-blue-400">
-      <div className="max-w-5xl w-full p-10 bg-white shadow-xl rounded-2xl border-2 border-indigo-400 overflow-hidden">
-        <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-8 tracking-tight">
-          Tech Skills Graph
-        </h2>
-        <div className="relative border-4 border-indigo-300 rounded-lg p-4">
-          <svg ref={svgRef} width="800" height="600"></svg>
-        </div>
-      </div>
+    <div className="relative h-screen w-full">
+    {/* Parallax Background */}
+    <div className="parallax-background absolute top-0 left-0 w-full h-full">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
     </div>
+  
+    {/* Foreground Content */}
+    <div className="absolute inset-0 flex justify-center items-center">
+      <svg ref={svgRef} width="800" height="600"></svg>
+    </div>
+  </div>
+  
   );
 };
 
