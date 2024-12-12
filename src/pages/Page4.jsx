@@ -4,7 +4,7 @@ const Page4 = () => {
   return (
     <div className="flex h-screen p-4 bg-white">
       {/* Left Section */}
-      <div className="h-full w-1/3 relative overflow-hidden bg-black  bg-black rounded-tl-2xl rounded-bl-2xl">
+      <div className="h-full w-1/3 relative overflow-hidden bg-black rounded-tl-2xl rounded-bl-2xl">
         <div className="relative w-full h-full flex justify-center items-center bg-black">
           <video
             autoPlay
@@ -20,13 +20,22 @@ const Page4 = () => {
       </div>
 
       {/* Right Section with Cards */}
-      <div className="w-2/3 h-full flex flex-wrap justify-start gap-x-5 gap-y-4 py-16 bg-black rounded-tr-2xl rounded-br-2xl">
+      <div className="w-2/3 h-full flex flex-wrap justify-start gap-x-5 gap-y-4 py-16 bg-black rounded-tr-2xl rounded-br-2xl overflow-hidden">
         {Array.from({ length: 6 }, (_, index) => (
           <div
             key={index}
-            className="w-[26vw] h-40 bg-white border-2 text-black border-gray-300 rounded-lg shadow-lg flex justify-center items-center text-xl text-center"
+            className="relative w-[26vw] h-40 bg-white border-2 text-black border-gray-300 rounded-lg shadow-lg flex flex-col justify-between items-center p-4"
           >
-            Card {index + 1}
+            {/* Card Content */}
+            <p className="text-xl text-center mb-4">Card {index + 1}</p>
+            
+            {/* Link Button */}
+            <button
+              onClick={() => window.location.href = "https://www.example.com"}
+              className="absolute bottom-3 right-4 w-14 py-1 bg-gray-600 text-white rounded-[100px] hover:bg-blue-700 transition duration-300"
+            >
+              Link
+            </button>
           </div>
         ))}
       </div>
