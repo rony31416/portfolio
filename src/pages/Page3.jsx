@@ -1,6 +1,7 @@
 import * as d3 from "d3";
 import React, { useEffect, useRef, useState } from "react";
-import "../parallax.css"
+//import "../parallax.css"
+import ParticleBackground from "../components/ParticleBackground";
 const Page3 = () => {
   const svgRef = useRef();
   const [isVisible, setIsVisible] = useState(false); // Track if page is in view
@@ -189,19 +190,16 @@ const Page3 = () => {
   };
 
   return (
-    <div className="relative h-screen w-full">
-    {/* Parallax Background */}
-    <div className="parallax-background absolute top-0 left-0 w-full h-full">
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-    </div>
-  
-    {/* Foreground Content */}
-    <div className="absolute inset-0 flex justify-center items-center">
-      <svg ref={svgRef} width="800" height="600"></svg>
+   <div className="h-screen px-4 py-4 bg-white">
+     <div className="relative bg-black rounded-lg overflow-hidden shadow-lg">
+    <div className="h-[96vh]">
+      <ParticleBackground />
+      <div className="absolute inset-0 flex justify-center items-center">
+        <svg ref={svgRef} width="800" height="600"></svg>
+      </div>
     </div>
   </div>
+   </div>
   
   );
 };
