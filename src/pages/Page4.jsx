@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Page4 = () => {
   return (
@@ -14,30 +14,19 @@ const Page4 = () => {
             className="absolute bottom-24 left-2 w-[320px] h-[220px] rounded-[8px]"
           ></video>
           <h1 className="uppercase font-[anzo1] text-6xl absolute left-14 top-24 text-white">
-            Projects
+            About
           </h1>
         </div>
       </div>
 
       {/* Right Section with Cards */}
-      <div className="w-2/3 h-full flex flex-wrap justify-start gap-x-5 gap-y-4 py-16 bg-black rounded-tr-2xl rounded-br-2xl overflow-hidden">
-        {Array.from({ length: 6 }, (_, index) => (
-          <div
-            key={index}
-            className="relative w-[26vw] h-40 bg-white border-2 text-black border-gray-300 rounded-lg shadow-lg flex flex-col justify-between items-center p-4"
-          >
-            {/* Card Content */}
-            <p className="text-xl text-center mb-4">Card {index + 1}</p>
-            
-            {/* Link Button */}
-            <button
-              onClick={() => window.location.href = "https://www.example.com"}
-              className="absolute bottom-3 right-4 w-14 py-1 bg-gray-600 text-white rounded-[100px] hover:bg-blue-700 transition duration-300"
-            >
-              Link
-            </button>
-          </div>
-        ))}
+      <div className=" relative w-2/3 h-full flex flex-wrap justify-start gap-x-5 gap-y-4 py-16 bg-black rounded-tr-2xl rounded-br-2xl overflow-hidden">
+        {/* <h2 className="text-4xl font-semibold text-white mb-4">Hello, I'm Rony Majumder</h2>
+         */}
+        <h2 className="text-4xl font-semibold text-white mb-4 animate-typewriter overflow-hidden whitespace-nowrap border-r-4 border-white caret-white" style={{caretWidth: '0.25em'}}>
+  Hello, I'm Rony Majumder
+</h2>
+
       </div>
     </div>
   );
