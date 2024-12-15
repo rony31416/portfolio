@@ -7,7 +7,9 @@
     position: relative;
     color: #ff1a1a; /* Initial color */
     animation: color-change 3s infinite; /* Add color-changing animation */
-  }
+    height:30px;
+     /* Ensure proper vertical alignment */
+    }
   
   .cursor {
     display: inline-block;
