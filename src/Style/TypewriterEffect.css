@@ -1,0 +1,45 @@
+.typewriter {
+    font-family: monospace;
+    font-size: 36px; /* Set the desired font size */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    color: #ff1a1a; /* Initial color */
+    animation: color-change 3s infinite; /* Add color-changing animation */
+  }
+  
+  .cursor {
+    display: inline-block;
+    border-right: 2px solid black;
+    animation: blink-caret 0.7s step-end infinite;
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+  
+  /* Fix for the color-changing animation */
+  @keyframes color-change {
+    0% {
+      color: #ff4d4d; /* Red */
+    }
+    25% {
+      color: #ff8c1a; /* Orange */
+    }
+    50% {
+      color: #00b300; /* Green */
+    }
+    75% {
+      color: #0099cc; /* Blue */
+    }
+    100% {
+      color: #ff4d4d; /* Back to Red */
+    }
+  }
+  

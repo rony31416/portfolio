@@ -1,5 +1,5 @@
 import React from "react";
-
+import TypewriterEffect from "../components/TypewriterEffect";
 const Page4 = () => {
   return (
     <div className="flex h-screen p-4 bg-white">
@@ -23,10 +23,9 @@ const Page4 = () => {
       <div className=" relative w-2/3 h-full flex flex-wrap justify-start gap-x-5 gap-y-4 py-16 bg-black rounded-tr-2xl rounded-br-2xl overflow-hidden">
         {/* <h2 className="text-4xl font-semibold text-white mb-4">Hello, I'm Rony Majumder</h2>
          */}
-        <h2 className="text-4xl font-semibold text-white mb-4 animate-typewriter overflow-hidden whitespace-nowrap border-r-4 border-white caret-white" style={{caretWidth: '0.25em'}}>
-  Hello, I'm Rony Majumder
-</h2>
-
+        <div>
+          <TypewriterEffect text="Hello, It's me Rony Majumder!" speed={100} />
+        </div>
       </div>
     </div>
   );

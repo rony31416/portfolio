@@ -1,5 +1,3 @@
-// // tailwind.config.js
-
 // /** @type {import('tailwindcss').Config} */
 // export default {
 //   content: [
@@ -9,13 +7,14 @@
 //   theme: {
 //     extend: {
 //       backgroundImage: {
-//         // Adjust the path to the image based on its location
 //         'custom-image': "url('Picsart_24-11-04_16-14-06-092.jpg')",
 //       },
 //     },
 //   },
 //   plugins: [],
 // };
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -24,17 +23,35 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-image': "url('Picsart_24-11-04_16-14-06-092.jpg')",
+      },
       animation: {
-        typewriter: 'typing 3s steps(30, end), blink 0.6s step-end infinite',
+        typewriter: 'typewriter 2s steps(11) forwards',
+        caret: 'typewriter 2s steps(11) forwards, blink 1s steps(11) infinite 2s',
       },
       keyframes: {
-        typing: {
-          '0%': { width: '0%' },
-          '100%': { width: '100%' },
+        typewriter: {
+          to: {
+            left: '100%',
+          },
         },
         blink: {
-          '50%': { borderColor: 'transparent' },
-          '100%': { borderColor: 'white' },
+          '0%': {
+            opacity: '0',
+          },
+          '0.1%': {
+            opacity: '1',
+          },
+          '50%': {
+            opacity: '1',
+          },
+          '50.1%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '0',
+          },
         },
       },
     },
