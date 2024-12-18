@@ -16,11 +16,11 @@ const Page1Bottom = () => {
       <div>
         <h2 className="text-xl font-[anzo4]">
           {" "}
-          WEB DEVELOPMENT | BRAND DESIGN
+          WEB DEVELOPMENT | NLP
         </h2>
         <h3 className="text-xl font-[anzo5] text-gray-400">
           {" "}
-          BESPOKE FREELANCE
+          AI & ML ENTHUSIAST
         </h3>
       </div>
       <div id="banner"  className="fixed bottom-10 right-10 flex flex-col items-center" >

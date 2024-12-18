@@ -28,18 +28,18 @@ const Page2 = () => {
         © all rights reserved by rony.majumder 2024
       </h3>
       <div className="rotateText mt-28">
-        <h1 className="text-[40vw] text-black font-[anzo2]  uppercas   leading-[30vw]  ">
-          IMPACTFUL
+        <h1 className="text-[40vw] text-black font-[anzo2]  uppercase  leading-[30vw]  ">
+          code
         </h1>
       </div>
       <div className="rotateText">
         <h1 className="text-[40vw] text-black font-[anzo2]  uppercase  leading-[30vw]">
-          DDESIGN
+        that 
         </h1>
       </div>
       <div className="rotateText">
         <h1 className="text-[40vw] text-black font-[anzo2]  uppercase  leading-[30vw] ">
-          IS THE
+        thinks
         </h1>
       </div>
       <div className="rotateText">
