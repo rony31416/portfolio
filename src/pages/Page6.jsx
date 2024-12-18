@@ -124,12 +124,12 @@ const Page6 = () => {
   
   // Helper function to handle next slide
   const handleNextSlide = () => {
-    setSlideNumber(prev => (prev + 1) % 4); // Using 3 as we have 3 slides
+    setSlideNumber(prev => (prev + 1) % 8); // Using 3 as we have 3 slides
   };
 
   // Helper function to handle previous slide
   const handlePrevSlide = () => {
-    setSlideNumber(prev => (prev - 1 + 4) % 4); // Using 3 as we have 3 slides
+    setSlideNumber(prev => (prev - 1 + 8) % 8); // Using 3 as we have 3 slides
   };
 
   const projects = [
@@ -137,25 +137,57 @@ const Page6 = () => {
       image: "stackoverflow.jpg",
       name: "MiniStackoverflow",
       type: "Project type",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et a earum ut libero repudiandae similique atque labore veritatis amet ex."
+      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et a earum ut libero repudiandae similique atque labore veritatis amet ex.",
+      githubLink: "https://github.com/yourusername/ministackoverflow"
     },
     {
       image: "gomokuai.jpg",
       name: "Gomoku AI",
       type: "Project type",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et a earum ut libero repudiandae similique atque labore veritatis amet ex."
+      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et a earum ut libero repudiandae similique atque labore veritatis amet ex.",
+      githubLink: "https://github.com/yourusername/ministackoverflow"
     },
     {
       image: "signlanguage.jpg",
       name: "Bangla sign language learning tools",
       type: "Project type",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et a earum ut libero repudiandae similique atque labore veritatis amet ex."
+      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et a earum ut libero repudiandae similique atque labore veritatis amet ex.",
+      githubLink: "https://github.com/yourusername/ministackoverflow"
     },
     {
-      image: "img01.jpg",
-      name: "img of mine",
+      image: "client-server.jpg",
+      name: "Client Server Messenger",
       type: "Project type",
-      description: " Et a earum ut libero repudiandae similique atque labore veritatis amet ex."
+      description: " Et a earum ut libero repudiandae similique atque labore veritatis amet ex.",
+      githubLink: "https://github.com/yourusername/ministackoverflow"
+    },
+    {
+      image: "ecommerce.jpg",
+      name: "Ecommerce Wensite",
+      type: "Project type",
+      description: "Et a earum ut libero repudiandae similique atque labore veritatis amet ex.",
+      githubLink: "https://github.com/yourusername/ministackoverflow"
+    },
+    {
+      image: "nasa.jpg",
+      name: "Nasa Space App challenge",
+      type: "Project type",
+      description: "Et a earum ut libero repudiandae similique atque labore veritatis amet ex.",
+      githubLink: "https://github.com/yourusername/ministackoverflow"
+    },
+    {
+      image: "nlp-practice.jpg",
+      name: "BNLP PreProsessing Library",
+      type: "Project type",
+      description: "Et a earum ut libero repudiandae similique atque labore veritatis amet ex.",
+      githubLink: "https://github.com/yourusername/ministackoverflow"
+    },
+    {
+      image: "sentiment.jpg",
+      name: "sentiment Analysis",
+      type: "Project type",
+      description: "Et a earum ut libero repudiandae similique atque labore veritatis amet ex.",
+      githubLink: "https://github.com/yourusername/ministackoverflow"
     }
   ];
 
@@ -177,7 +209,16 @@ const Page6 = () => {
                 <div className="slide-text-content">
                   <h3 className="slide-caption">{project.type}</h3>
                   <p className="slide-paragraph">{project.description}</p>
-                  <button className="watch-video-btn">Github link</button>
+                 <button  className="watch-video-btn">
+                 <a 
+                    href={project.githubLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                   
+                  >
+                    Github link
+                  </a>
+                 </button>
                 </div>
               </div>
             ))}
