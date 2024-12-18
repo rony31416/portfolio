@@ -221,8 +221,8 @@ const Page6 = () => {
   ];
 
   return (
-    <div className='h-screen relative p-4 bg-white'>
-      <div  className='h-full w-full bg-black  rounded-[16px] body'>
+    <div className='h-screen relative p-4 bg-white mb-20 '>
+      <div  className='h-full w-full bg-black  -[16x] body'>
         <section className="main-section ">
           <div className="slider">
             {projects.map((project, index) => (

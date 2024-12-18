@@ -261,7 +261,7 @@ body {
 .slide-pagination {
   z-index: 888;
   position: absolute;
-  right: 70px;
+  left : 39%;
   display: flex;
   justify-content: center;
   align-items: center;
