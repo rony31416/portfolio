@@ -24,7 +24,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'custom-image': "url('banner.jpg')",
+        'custom-image': "url('bg.jpg')",
       },
       animation: {
         typewriter: 'typewriter 2s steps(11) forwards',
