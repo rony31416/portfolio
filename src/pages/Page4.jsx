@@ -7,8 +7,8 @@ const Page4 = () => {
       <div className="h-full w-1/3 relative overflow-hidden bg-black rounded-tl-2xl rounded-bl-2xl">
         <div className="relative w-full h-full flex justify-center items-center bg-black">
           <video
-            autoPlay
-            src="/src/assets/ghori.mp4"
+            autoPlay={true}
+            src="ghori.mp4"
             loop
             muted
             className="absolute bottom-24 left-2 w-[320px] h-[220px] rounded-[8px]"
