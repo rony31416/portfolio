@@ -20,7 +20,7 @@ const Page4 = () => {
       </div>
 
       {/* Right Section with Cards */}
-      <div className=" relative w-2/3 flex-wrap justify-start py-20 bg-black rounded-tr-2xl overflow-visible min-h-[200px] rounded-br-2xl overflow-hidden">
+      <div className=" relative w-2/3 flex-wrap justify-start py-20 bg-black rounded-tr-2xl  min-h-[200px] rounded-br-2xl overflow-hidden">
         {/* <h2 className="text-4xl font-semibold text-white mb-4">Hello, I'm Rony Majumder</h2>
          */}
         <div className="text-xl font-bold text-red-800 mb-6 mt-10">
