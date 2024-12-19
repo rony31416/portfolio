@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 const Page7 = () => {
   return (
     <div className='h-screen relative p-4 bg-gray-100 '>
-      <div className='h-full w-full bg-white overflow-hidden rounded-lg shadow-lg mt-4'>
+      <div className='h-90% w-full bg-white overflow-hidden rounded-lg shadow-lg mt-4'>
         {/* Contact Me Section */}
         <div id="contact" className="bg-gray-200 w-4/5 max-w-4xl h-fit p-6 mx-auto shadow-md flex flex-col rounded-lg gap-4">
           <div className="flex flex-row items-center justify-center gap-4 p-4 border-b-2 border-gray-400">
@@ -59,8 +59,8 @@ const Page7 = () => {
         </div>
 
         {/* Footer Section */}
-        <footer className="bg-gray-800 text-white p-8 mt-10">
-  <p className="text-center text-lg ">This portfolio design is inspired by modern minimalistic <a href="https://www.anzo.studio/" className="text-blue-400 hover:underline" target='_blank'>web designs.</a> </p>
+        <footer className="bg-gray-800 text-white w-full">
+  <p className="text-center text-lg pt-2">This portfolio design is inspired by modern minimalistic <a href="https://www.anzo.studio/" className="text-blue-400 hover:underline" target='_blank'>web designs.</a> </p>
   <div className="flex justify-center ">
   </div>
   <p className="text-center text-lg">Email: <a href="mailto:bsse1325@iit.du.ac.bd" className="text-blue-400 hover:underline">bsse1325@iit.du.ac.bd</a> </p>
